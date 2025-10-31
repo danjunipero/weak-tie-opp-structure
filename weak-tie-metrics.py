@@ -79,8 +79,8 @@ cfg = {
 
     # grid for visualisation + LUM join (fixed resolution)
     "viz_cell_m": 150,
-    "clip_grid_to_streets": True,  # how many amenities per cell
-    "street_buffer_m": 30,
+    "clip_grid_to_streets": True,  # toggle whether the grid should clip to the network or include everything
+    "street_buffer_m": 30,         # how far beyond the network to include
     "sjoin_max_dist_m": 150,
 
     # adaptive AUI controls (amenity ubiquity grid, which adapts to local needs)

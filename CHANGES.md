@@ -339,7 +339,7 @@ The script now saves:
 - A CSV (summary_metrics.csv) with the indicators and run config.
 
 
-# v0.7.0 - Added Clip_Grid_To_Street Toggle
+# v0.7.0 - Added clip_grid_to_streets Toggle
 
 **WHAT CHANGED**
 

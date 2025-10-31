@@ -26,7 +26,7 @@ Fine-grain, ubiquitous, mixed-use, walkable urban areas should:
 - Generate varied, redundant routes to different destinations
 - Distribute co-presence across the network rather than bottleneck it through a single corridor
 
-These conditions increase opportunities for weak-tie formation and maintenance through a higher chance for spotaneous encounters with other residents.
+**These conditions increase opportunities for weak-tie formation and maintenance through a higher chance for spotaneous encounters with other residents.**
 
 ---
 
@@ -81,7 +81,7 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
     - NUS: nus_method of either "nodes_all" (evaluate every node) or "segments_sampled" (sample points along edges every sample_step_m and snap to nearest node).
     - Access Gini from the reachable PoI counts.
     - Route entropy, coverage from k-shortest paths between sampled residential origins and sampled PoIs.
-    - CPP via OD shortest paths with a simple diurnal weighting, yields per-edge loads and concentration stats.
+    - CPP via OD shortest paths with a toy diurnal weighting, yields per-edge loads and concentration stats.
 
 ---
 
@@ -89,9 +89,9 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
 
 Key fields from cfg:
 
-- place_name (str)
+- place_name (text string)
 - study_radius_m (int, metres)
-- crs_metric (default: "EPSG:3857")
+- crs_metric (default: "EPSG:3857") (web mercator projection)
 - viz_cell_m, clip_grid_to_streets (bool), street_buffer_m, sjoin_max_dist_m
 - aui_modes (list: "grid", "network"), target_pois_per_cell, cell_min_m, cell_max_m, dedupe_radius_m, aui_network_min_step_m
 - NUS: nus_method ("nodes_all" recommended for stability), reach_radius_m, min_pois_for_service, sample_step_m

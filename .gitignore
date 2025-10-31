@@ -205,3 +205,24 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Geo caches & temp spatial files
+.osmnx_cache/
+.geopandas_cache/
+cache/
+*.gpkg-journal
+*.sqlite-journal
+*.qgs~
+*.prj~
+*.aux.xml
+*.tif.aux.xml
+
+# Run artefacts
+outputs/
+
+data/raw/
+data/interim/
+data/processed/
+
+# Want to only keep images I intentionally add
+!docs/assets/**

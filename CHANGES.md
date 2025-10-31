@@ -180,7 +180,7 @@ Added a new AUI* calculation, so that two AUI* values are produced.
     - The network is sampled at a step length tied to the adaptive grid L
     - Occupancy/Evenness is measured over the network samples instead of planar cells
 
-- AUI (raw) remains transparency but is de-emphasised
+- AUI (raw) remains for transparency but is de-emphasised.
 
 **WHY**
 

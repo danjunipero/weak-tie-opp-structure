@@ -75,7 +75,7 @@ I’m treating route variety itself as structure. If many people can get to dail
 - For each OD pair:
     - Took the single shortest path along the projected walk network.
     - Weighted trips by a simple 24-hour profile (more movement in daytime than at 3 a.m.).
-        - Disclaimer: they are completely arbitrary numbers
+        - Disclaimer: these are placeholder toy diurnal weights
     - Accumulated this into an edge-by-hour load matrix F[edge, hour].
     - Summed over time to get total Co-Presence Potential (CPP) per edge.
 - From this, we compute:
@@ -180,7 +180,7 @@ Added a new AUI* calculation, so that two AUI* values are produced.
     - The network is sampled at a step length tied to the adaptive grid L
     - Occupancy/Evenness is measured over the network samples instead of planar cells
 
-Removed AUI_raw completely since AUI* (grid) is robust enough
+- AUI (raw) remains transparency but is de-emphasised
 
 **WHY**
 
@@ -349,8 +349,8 @@ The script now saves:
 
 **WHY**
 
-- While clipping to the grid was useful in areas with large amounts of disused industrial land or green space, I found that it skewed LUM in places where empty land is actually something.
-    - E.g. Oxford College quads are no-access or controlled-access on OSM. Clipping to the grid hollowed these out.
+- While clipping the grid to streets was useful in areas with large amounts of disused industrial land or green space, I found that it skewed LUM in places where empty land is actually something.
+    - E.g. Oxford College quads are no-access or controlled-access on OSM. Clipping to the street hollowed these out.
     - Undesirable since those quads are still places of social contact and use, unlike fenced-off empty plots.
 
 

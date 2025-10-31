@@ -1,4 +1,4 @@
-# REFERENCES
+# BIBLIOGRAPHY
 
 Boeing, G. (2017). OSMnx: New methods for acquiring, constructing, analyzing, and visualizing complex street networks. *Computers, environment and urban systems*, *65*, 126-139.
 

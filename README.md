@@ -46,11 +46,11 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
 
 | Metric | Meaning | Better weak-tie opportunity structure if… |
 | --- | --- | --- |
-| AUI_raw (grid) | Evenness of POIs across adaptive grid cells. | Higher (more even) |
+| AUI_raw (grid) | Evenness of PoIs across adaptive grid cells. | Higher (more even) |
 | AUI* | Occupancy-weighted AUI: combines coverage (share of non-empty cells) with evenness among the non-empty cells. | Higher |
 | AUI* (network) | AUI* computed by sampling along the walk network (not just Euclidean grid). | Higher |
-| NUS | Network ubiquity share: fraction of sampled nodes with ≥ min_pois_for_service POIs reachable within reach_radius_m. | Closer to 1.0 |
-| Access Gini | Inequality of reachable POIs across sampled nodes. | Lower |
+| NUS | Network ubiquity share: fraction of sampled nodes with ≥ min_pois_for_service PoIs reachable within reach_radius_m. | Closer to 1.0 |
+| Access Gini | Inequality of reachable PoIs across sampled nodes. | Lower |
 | Route entropy (norm.) | Diversity among k-shortest plausible paths (per OD). | Closer to 1.0 |
 | Edge coverage (share/length) | Share of simplified graph edges/length touched by plausible daily paths. | Higher |
 | CPP Gini | Concentration of simulated co-presence on a few links. | Lower |

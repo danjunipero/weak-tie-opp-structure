@@ -26,7 +26,7 @@ Fine-grain, ubiquitous, mixed-use, walkable urban areas should:
 - Generate varied, redundant routes to different destinations
 - Distribute co-presence across the network rather than bottleneck it through a single corridor
 
-These conditions increase opportunities for weak-tie formation and maintenance.
+These conditions increase opportunities for weak-tie formation and maintenance through a higher chance for spotaneous encounters with other residents.
 
 ---
 

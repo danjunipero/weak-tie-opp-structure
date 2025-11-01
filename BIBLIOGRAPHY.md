@@ -22,6 +22,8 @@ Hagberg, A., Swart, P. J., & Schult, D. A. (2008). *Exploring network structure
 
 Harris, C. R., Millman, K. J., Van Der Walt, S. J., Gommers, R., Virtanen, P., Cournapeau, D., ... & Oliphant, T. E. (2020). Array programming with NumPy. *nature*, *585*(7825), 357-362.
 
+Hillier, B., Leaman, A., Stansall, P., & Bedford, M. (1976). Space syntax. Environment and Planning B: Planning and design, 3(2), 147-185.
+
 Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. *Computing in science & engineering*, *9*(03), 90-95.
 
 Jacobs, J. (1961). The death and life of great American cities. New York: Random House.

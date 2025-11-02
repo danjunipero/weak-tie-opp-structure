@@ -40,24 +40,22 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
 4. Computes indicators of ubiquity, short-walk access, inequality of access, route diversity, path coverage, and co-presence concentration
 5. Exports a summary CSV, a static map (PNG), and an interactive map (HTML)
 
----
 
 ## Metrics Cheat-Sheet
 
-| Metric | Meaning | Better weak-tie opportunity structure if… |
-| --- | --- | --- |
-| AUI_raw (grid) | Evenness of PoIs across adaptive grid cells. | Higher (more even) |
-| AUI* | Occupancy-weighted AUI: combines coverage (share of non-empty cells) with evenness among the non-empty cells. | Higher |
-| AUI* (network) | AUI* computed by sampling along the walk network (not just Euclidean grid). | Higher |
-| NUS | Network ubiquity share: fraction of sampled nodes with ≥ `min_pois_for_service` PoIs reachable within `reach_radius_m`. | Closer to 1.0 |
-| Access Gini | Inequality of reachable PoIs across sampled nodes. | Lower |
-| Route entropy (norm.) | Diversity among k-shortest plausible paths (per OD). | Closer to 1.0 |
-| Edge coverage (share/length) | Share of simplified graph edges/length touched by plausible daily paths. | Higher |
-| CPP Gini | Concentration of simulated co-presence on a few links. | Lower |
-| Top-10% CPP share | Load carried by top decile of links. | Lower |
-| LUM entropy | Land-use mix entropy across viz grid (excludes transit). | Higher |
+| Metric | Meaning | Range| Better weak-tie opportunity structure if… |
+| --- | --- | --- | --- |
+| AUI_raw (grid) | Evenness of PoIs across adaptive grid cells. | 0-1 | Higher |
+| AUI* | Occupancy-weighted AUI: combines coverage (share of non-empty cells) with evenness among the non-empty cells. | 0-1 | Higher |
+| AUI* (network) | AUI* computed by sampling along the walk network (not just Euclidean grid). | 0-1 | Higher |
+| NUS | Network ubiquity share: fraction of sampled nodes with ≥ `min_pois_for_service` PoIs reachable within `reach_radius_m`. | 0-1 | Higher |
+| Access Gini | Inequality of reachable PoIs across sampled nodes. | 0-1 | Lower |
+| Route entropy (norm.) | Diversity among k-shortest plausible paths (per OD). | 0-1 | Higher |
+| Edge coverage (share/length) | Share of simplified graph edges/length touched by plausible daily paths. | 0-1 | Higher |
+| CPP Gini | Concentration of simulated co-presence on a few links. | 0-1 | Lower |
+| Top-10% CPP share | Load carried by top decile of links. | 0-1 | Lower |
+| LUM entropy | Land-use mix entropy across viz grid (excludes transit). | 0-1 | Higher |
 
----
 
 ## How are metrics calculated?
 
@@ -221,11 +219,11 @@ For transparency and reproducibility, the CSV also includes:
 Key fields from cfg:
 
 - `place_name` (text string)
-- `study_radius_m` (int, metres)
+- `study_radius_m` (integer, metres)
 - `crs_metric` (default: "EPSG:3857") (web mercator projection)
 - `viz_cell_m`, `clip_grid_to_streets` (bool), `street_buffer_m`, `sjoin_max_dist_m`
 - `aui_modes` (list: "grid", "network"), `target_pois_per_cell`, `cell_min_m`, `cell_max_m`, `dedupe_radius_m`, `aui_network_min_step_m`
-- NUS: nus_method ("nodes_all" recommended for stability), reach_radius_m, min_pois_for_service, sample_step_m
+- NUS: `nus_method` ("nodes_all" recommended for stability), `reach_radius_m`, `min_pois_for_service`, `sample_step_m`
 - Trip structure: `k_paths`, `beta`, `max_origins`, `dests_per_origin`
 - Output: `map_zoom`, `outdir`
 - `seed` for reproducibility
@@ -244,6 +242,8 @@ Key fields from cfg:
 - Varied encounter structure: High normalised route entropy and substantial edge coverage indicate many plausible, distinct routes to different amenities, promoting repeated but distributed overlap.
 - Concentration and distribution: Lower CPP Gini and Top-10% share suggest co-presence is spread across the network rather than funnelled into a single corridor.
 - Mix: Higher LUM entropy correlates with a stronger baseline for everyday social mixing but should be interpreted alongside ubiquity and route diversity.
+
+---
 
 ## Data sources & attribution
 

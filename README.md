@@ -167,7 +167,7 @@ For each origin:
 ### Co-Presence Potential (CPP) Concentration
 
 1. Build OD pairs (sampled residential origins and sampled PoIs)
-2. For each OD, take the single shortest path on G_proj
+2. For each OD, take the single shortest path on `G_proj`
 3. Weight each path by a simple 24hr profile and accumulate on edge-by-hour load matrix
 4. Sum hours to get total edge load CPP
 5. Compute
@@ -201,17 +201,19 @@ For transparency and reproducibility, the CSV also includes:
     
 3. PoIs & classification
     
-    OSM features reduced to representative points and classified into five social-use categories (plus transit and other). Deduping prevents overcounting multi-tagged places.
+    OSM features reduced to representative points and classified into five social-use categories (plus transit and other).
     
 4. Grids
-    - Viz grid: fixed cell size for LUM and residential origin sampling. There is an optional clip to streets via buffered walk-network.
+    - Viz grid: fixed cell size for LUM and residential origin sampling. There is an optional clip to streets using a buffered walk network.
     - Adaptive AUI grid: cell size chosen so expected PoIs per cell ≈ `target_pois_per_cell`, clamped by `[cell_min_m, cell_max_m]`.
+  
 5. Indicators
-    - AUI_raw / AUI* on the adaptive grid; optional AUI* on the network via along-edge sampling.
-    - NUS: `nus_method` of either "nodes_all" (evaluate every node) or "segments_sampled" (sample points along edges every sample_step_m and snap to nearest node).
+   
+    - AUI_raw / AUI* on the adaptive grid (optional AUI* on the network with along-edge sampling).
+    - NUS: `nus_method` of either "nodes_all" (evaluate every node) or "segments_sampled" (sample points along edges every `sample_step_m` and snap to the nearest node).
     - Access Gini from the reachable PoI counts.
     - Route entropy, coverage from k-shortest paths between sampled residential origins and sampled PoIs.
-    - CPP via OD shortest paths with a toy diurnal weighting, yields per-edge loads and concentration stats.
+    - CPP via OD shortest paths with a toy diurnal weighting, outputs per-edge loads and concentration stats.
 
 
 ## Configuration
@@ -231,9 +233,9 @@ Key fields from cfg:
 
 ## Outputs
 
-- `outputs/cpp_map_static.png` — static basemap with CPP coloring and PoI dots.
-- `outputs/cpp_map_interactive.html` — interactive layers for CPP and PoIs.
-- `outputs/summary_metrics.csv` — one row with metrics and config echoes for auditability.
+- `outputs/cpp_map_static.png` - static basemap with CPP colouring and PoI dots.
+- `outputs/cpp_map_interactive.html` - interactive layers for CPP and PoIs.
+- `outputs/summary_metrics.csv` - one row with metrics and config parameters 
 
 
 ## Interpreting results

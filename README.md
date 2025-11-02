@@ -69,7 +69,7 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
     $entropy:
     \text{LUM} = -\sum_{c} p_c \log p_c \; / \; \log 5$
     
-    where Pc is the share of joined PoIs in category c
+    where $Pc$ is the share of joined PoIs in category $c$
     
 4. `LUM_join_share` = joined PoIs / total PoIs
 (just a sanity check on sjoin)

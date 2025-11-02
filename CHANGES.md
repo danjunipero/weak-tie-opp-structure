@@ -1,3 +1,6 @@
+![v0.3.0 and v0.9.0 PNG output side by side](docs/assets/comparison.jpeg)
+*PNG output of a run on Radcliffe Camera, Oxford. v0.3.0 (left) and v0.9.0 (right)*
+
 Alongside the change log I’ve added a THINKING heading to show the relevance of changes to my research question. Version numbers are completely arbitrary I just thought they looked cool.
 
 # v0.1.0 - Initial Prototype

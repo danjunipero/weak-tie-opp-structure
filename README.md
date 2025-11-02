@@ -124,7 +124,7 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
 For each sampled origin and sampled destination:
 
 1. On `G_simple`, get up to `k_paths` shortest simple paths by edge length
-2. Convert part costs $(c_i)$ to utilities
+2. Convert path costs $(c_i)$ to utilities
    
     $u_i = \exp[-\beta (c_i - \min c)]$
    

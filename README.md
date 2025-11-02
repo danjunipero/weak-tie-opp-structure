@@ -61,7 +61,7 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
 
 ### Land-Use Mix (LUM)
 
-1. Snap each PoI to the nearest visual grid cell with sjoin_max_dist_m
+1. Snap each PoI to the nearest visual grid cell with `sjoin_max_dist_m`
 2. Count PoIs per functional category across the joined PoIs (excluding transit)
 3. Compute normalised Shannon Entropy
     
@@ -92,7 +92,7 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
 3. Let counts = PoIs per cell; nonempty = counts greater than 0
     1. `AUI_occupancy` = share of cells with 1 or more PoIs
     2. `AUI_raw` = 1 - gini(counts)
-    3. `AUI_star` = AUI_occupancy x (1 - gini(nonempty))
+    3. `AUI_star` = `AUI_occupancy` x (1 - gini(nonempty))
     4. `AUI_nonempty_gini` = gini(nonempty)
 
 ### Amenity Ubiquity Index (Network)
@@ -123,7 +123,7 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
 
 For each sampled origin and sampled destination:
 
-1. On `G_simple`, get up to k_paths shortest simple paths by edge length
+1. On `G_simple`, get up to `k_paths` shortest simple paths by edge length
 2. Convert part costs $(c_i)$ to utilities
    
     $u_i = \exp[-\beta (c_i - \min c)]$
@@ -193,11 +193,11 @@ For transparency and reproducibility, the CSV also includes:
 
 1. Study area
     
-    Circle polygon of radius study_radius_m around place_name (metric CRS).
+    Circle polygon of radius `study_radius_m` around place_name (metric CRS).
     
 2. Network
     
-    Walk network via OSMnx. This is projected and simplified to a DiGraph with one min-length edge per (u,v) for k-shortest-path calculation.
+    Walk network via OSMnx. This is projected and simplified to a DiGraph with one min-length edge per $(u,v)$ for k-shortest-path calculation.
     
 3. PoIs & classification
     
@@ -231,9 +231,9 @@ Key fields from cfg:
 
 ## Outputs
 
-- outputs/cpp_map_static.png — static basemap with CPP coloring and PoI dots.
-- outputs/cpp_map_interactive.html — interactive layers for CPP and PoIs.
-- outputs/summary_metrics.csv — one row with metrics and config echoes for auditability.
+- `outputs/cpp_map_static.png` — static basemap with CPP coloring and PoI dots.
+- `outputs/cpp_map_interactive.html` — interactive layers for CPP and PoIs.
+- `outputs/summary_metrics.csv` — one row with metrics and config echoes for auditability.
 
 
 ## Interpreting results

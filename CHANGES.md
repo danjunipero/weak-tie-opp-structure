@@ -1,9 +1,11 @@
+# CHANGES
+
 ![v0.3.0 and v0.9.0 PNG output side by side](docs/assets/comparison.jpeg)
 *PNG output of a run on Radcliffe Camera, Oxford. v0.3.0 (left) and v0.9.0 (right)*
 
-Alongside the change log I’ve added a THINKING heading to show the relevance of changes to my research question. Version numbers are completely arbitrary I just thought they looked cool.
+**Alongside the change log I’ve added a THINKING heading to show the relevance of changes to my research question. Version numbers are completely arbitrary I just thought they looked cool.**
 
-# v0.1.0 - Initial Prototype
+## v0.1.0 - Initial Prototype
 
 **GOAL**
 
@@ -23,7 +25,7 @@ Compare “fine-grain” vs “nodal” neighbourhoods in terms of walkability a
 Trying to operationalise whether the street network design structurally allows residents to run into people throughout the area, or whether everyone is funnelled into one “high street” style node when going about their daily life within the area.
 
 
-# v0.1.1 - OSM boundary handling
+## v0.1.1 - OSM boundary handling
 
 **CHANGES**
 
@@ -35,7 +37,7 @@ Trying to operationalise whether the street network design structurally allows r
 OpenStreetMap is inconsistent about returning neighbourhood-scale polygons. We need a study area that reflects where people actually walk for daily needs, not just admin boundaries.
 
 
-# v0.2.0 - Fixed network handling and route entropy
+## v0.2.0 - Fixed network handling and route entropy
 
 **CHANGES**
 
@@ -68,7 +70,7 @@ Route entropy
 I’m treating route variety itself as structure. If many people can get to daily destinations through multiple viable streets, co-presence is more spatially distributed instead of squeezed into one channel.
 
 
-# v0.3.0 - CPP and network coverage
+## v0.3.0 - CPP and network coverage
 
 **CHANGES**
 
@@ -96,7 +98,7 @@ I’m treating route variety itself as structure. If many people can get to dail
 CPP becomes a proxy for structural conditions that can support weak-tie maintenance: repeated incidental overlap in public space.
 
 
-# v0.4.0 - Problems with early AUI and the redesign
+## v0.4.0 - Problems with early AUI and the redesign
 
 **Old Problem**
 
@@ -138,7 +140,7 @@ AUI_star now answers:
 - Amenity ubiquity is now explicitly about whether daily-life destinations are embedded through a meaningful share of the walkable network, instead of hoarded in one corridor.
 
 
-# v0.4.1 - Tightened PoI dedupe
+## v0.4.1 - Tightened PoI dedupe
 
 **WHAT CHANGED**
 
@@ -162,7 +164,7 @@ AUI_star now answers:
 Because the adaptive grid’s cell size AUI_cell_L_m changes with deduped PoI count, I’ll always report AUI_cell_L_m with AUI*.
 
 
-# v0.5.0 - Further AUI* Refinement
+## v0.5.0 - Further AUI* Refinement
 
 **Old Problem**
 
@@ -194,7 +196,7 @@ Now AUI should remain sensitive to how amenities are spread along actual streets
 This problem was found when looking at Saltley, Birmingham - a fine-grain victorian development with relatively high ubiquity. Saltley also borders an extensive disused industrial area (the *Northern Industrial Corridor*).  AUI* (grid) remained low due to those big blanks, but AUI* (net) is significantly higher, tracking the actual street spread.
 
 
-# v0.6.0 - Introducing NUS (Network Ubiquity Share)
+## v0.6.0 - Introducing NUS (Network Ubiquity Share)
 
 **WHAT CHANGED**
 
@@ -223,7 +225,7 @@ NUS is directly interpretable.
 If NUS = 0.42, that means about 42 percent of sampled points on the network are within ~180 m of at least three distinct amenities (using current defaults).
 
 
-# v0.6.1 - Access_Gini_Local with NUS
+## v0.6.1 - Access_Gini_Local with NUS
 
 **OLD PROBLEM**
 
@@ -251,7 +253,7 @@ I’ve now added local access inequality: access_gini_local.
     - High NUS + high access_gini_local = node-dominant structure
 
 
-# v0.6.2 - Cleaning up land-use mix (LUM) categories
+## v0.6.2 - Cleaning up land-use mix (LUM) categories
 
 **WHAT CHANGED**
 
@@ -308,7 +310,7 @@ Then I do two things with that:
 This reframes “mixed use” into “can ordinary daily life pull you into different kinds of shared civic/commercial spaces,” which matters for weak-tie exposure.
 
 
-# v0.6.3 - Polishing
+## v0.6.3 - Polishing
 
 **WHAT CHANGED**
 
@@ -342,7 +344,7 @@ The script now saves:
 - A CSV (summary_metrics.csv) with the indicators and run config.
 
 
-# v0.7.0 - Added clip_grid_to_streets Toggle
+## v0.7.0 - Added clip_grid_to_streets Toggle
 
 **WHAT CHANGED**
 
@@ -357,7 +359,7 @@ The script now saves:
     - Undesirable since those quads are still places of social contact and use, unlike fenced-off empty plots.
 
 
-# v0.8.0 - Refined NUS Further
+## v0.8.0 - Refined NUS Further
 
 **OLD PROBLEM**
 
@@ -389,7 +391,7 @@ Now NUS
 - Allows for easier comparability between areas
 
 
-# v0.9.0 - Replacing Buffer with Study Circle [BETA]
+## v0.9.0 - Replacing Buffer with Study Circle [BETA]
 
 **WHAT CHANGED**
 

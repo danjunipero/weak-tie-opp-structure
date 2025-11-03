@@ -74,7 +74,6 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
 4. `LUM_join_share` = joined PoIs / total PoIs
 (just a sanity check on sjoin)
 
-**Interpretation:** 0 = one category dominates, 1 = balanced across daily life categories
 
 ### Amenity Ubiquity Index (Adaptive Grid)
 

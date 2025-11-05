@@ -26,7 +26,7 @@ Fine-grain, ubiquitous, mixed-use, walkable urban areas should:
 - Generate varied, redundant routes to different destinations
 - Distribute co-presence across the network rather than bottleneck it through a single corridor
 
-**These conditions increase opportunities for weak-tie formation and maintenance through a higher chance for spontaneous encounters with other residents.**
+**I hypothesise that these conditions increase opportunities for weak-tie formation and maintenance through a higher chance for spontaneous encounters with other residents - as opposed to more 'nodal' forms.**
 
 ---
 
@@ -43,7 +43,7 @@ Given a place name (e.g. Jericho, Oxford, UK) and a radius, the script:
 
 ## Metrics Cheat-Sheet
 
-| Metric | Meaning | Range| Better weak-tie opportunity structure if… |
+| Metric | Meaning | Range| Ubiquitous mixed-use if... (opposite for nodal) |
 | --- | --- | --- | --- |
 | AUI_raw (grid) | Evenness of PoIs across adaptive grid cells. | 0-1 | Higher |
 | AUI* | Occupancy-weighted AUI: combines coverage (share of non-empty cells) with evenness among the non-empty cells. | 0-1 | Higher |

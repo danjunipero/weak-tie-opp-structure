@@ -9,7 +9,7 @@ dest_cell_H=0.996; dest_cat_H=0.320; CPP_gini=0.391; top10_share=0.368
 ```
 *Console output from the same run on Gracia.*
 
-**Purpose.** This repo contains the prototype Python script for my proposed Master’s dissertation. This project investigates whether the physical design of a neighbourhood structurally supports or inhibits the formation and maintenance of ‘weak-tie’ social networks. This script is the quantitative aspect of this research, using OpenStreetMap data for a given neighbourhood it calculates novel metrics that measure what I’m calling ‘Weak-Tie Opportunity Structure’.
+**Purpose.** This repo contains the prototype Python script for my proposed Master’s dissertation. This project investigates whether the physical design of a neighbourhood structurally supports or inhibits the formation and maintenance of ‘weak-tie’ social networks. This script is the quantitative aspect of this research, using OpenStreetMap data for a given neighbourhood it calculates metrics that measure what I’m calling ‘Weak-Tie Opportunity Structure’.
 
 This model draws from two key theorists:
 

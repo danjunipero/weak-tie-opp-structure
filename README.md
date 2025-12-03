@@ -1,4 +1,4 @@
-# Weak-Tie Opportunity Structure: A Spatial Methods Prototype
+# Weak-Tie Opportunity Structure Spatial Methods Prototype
 ![Co-presence map of Gràcia](docs/assets/cpp_map_static-8.png)
 *Example static map png output for a run on Gracia, Barcelona at a radius of 800m.*
 ```python

@@ -255,7 +255,7 @@ def classify_poi(row):
     # everyday retail / errands
     if s in {
         "convenience","supermarket","greengrocer","butcher","bakery",
-        "newsagent","alcohol","kiosk", "off_licence"
+        "newsagent","alcohol","kiosk", "off_licence",
         "hairdresser","beauty","cosmetics","clothes", "retail",
     }:
         return "everyday_retail"
